@@ -24,6 +24,7 @@ public class ProjectManager {
         wrap.getVerticalScrollBar().setUnitIncrement(10);
 
         JFrame app = new JFrame("Project Manager");
+        app.setJMenuBar(new TopMenu());
         app.add(wrap);
         app.setSize(new Dimension(615, 500));
         app.setLocationRelativeTo(null);
