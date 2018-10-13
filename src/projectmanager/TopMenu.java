@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import projectmanager.models.ProjectSort;
+import projectmanager.views.MainPanel;
 
 /**
  *
@@ -92,6 +94,18 @@ public class TopMenu extends JMenuBar {
             System.out.println(ae.getActionCommand() + " JMenuItem clicked.");
 
             switch (ae.getActionCommand()) {
+                case "defaultSort":
+                    MainPanel.getInstance().updateView(ProjectSort.DEFAULT);
+                    break;
+                case "priceSort":
+                    MainPanel.getInstance().updateView(ProjectSort.BY_PRICE);
+                    break;
+                case "prioritySort":
+                    MainPanel.getInstance().updateView(ProjectSort.BY_PRIORITY);
+                    break;
+                case "deadlineSort":
+                    MainPanel.getInstance().updateView(ProjectSort.BY_DEADLINE);
+                    break;
                 case "exit":
                     System.exit(0);
             }
