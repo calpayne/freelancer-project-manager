@@ -37,7 +37,7 @@ public class ProjectBriefPanel extends JPanel {
         
         JButton view = new JButton("View");
         view.addActionListener((ActionEvent ae) -> {
-            System.out.println(project.toString());
+            ProjectViewDialog pvd = new ProjectViewDialog(project);
         });
         
         c.gridx = 0;

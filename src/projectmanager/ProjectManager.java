@@ -15,6 +15,8 @@ import projectmanager.views.MainPanel;
  */
 public class ProjectManager {
 
+    public static JFrame app;
+    
     /**
      * @param args the command line arguments
      */
@@ -23,7 +25,7 @@ public class ProjectManager {
         JScrollPane wrap = new JScrollPane(MainPanel.getInstance());
         wrap.getVerticalScrollBar().setUnitIncrement(10);
 
-        JFrame app = new JFrame("Project Manager");
+        app = new JFrame("Project Manager");
         app.setJMenuBar(new TopMenu());
         app.add(wrap);
         app.setSize(new Dimension(615, 500));
