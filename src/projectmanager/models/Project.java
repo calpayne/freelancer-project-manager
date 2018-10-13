@@ -7,6 +7,7 @@ import java.util.Date;
  * @author Cal Payne
  */
 public class Project {
+
     private String name;
     private String clientName;
     private String clientEmail;
@@ -28,7 +29,7 @@ public class Project {
      * @param priority the projects priority
      * @param progress the projects progress out of 100%
      */
-    public Project(String name, String clientName, String clientEmail, String notes, Date startDate, Date deadline, 
+    public Project(String name, String clientName, String clientEmail, String notes, Date startDate, Date deadline,
             double price, Priority priority, int progress) {
         this.name = name;
         this.clientName = clientName;
