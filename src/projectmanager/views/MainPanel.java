@@ -40,6 +40,13 @@ public class MainPanel extends JPanel {
         this.setBackground(Color.decode("#F5F5F5"));
     }
 
+    /**
+     *
+     * Updates the projects in the view
+     *
+     * @param sortBy how to sort the projects
+     *
+     */
     public void updateView(ProjectSort sortBy) {
         this.removeAll();
 
@@ -64,6 +71,11 @@ public class MainPanel extends JPanel {
         this.repaint();
     }
 
+    /**
+     *
+     * @return the one and only MainPanel instance
+     *
+     */
     public static MainPanel getInstance() {
         if (instance == null) {
             instance = new MainPanel();

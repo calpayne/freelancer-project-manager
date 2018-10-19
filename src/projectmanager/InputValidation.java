@@ -8,10 +8,26 @@ import java.util.Date;
  */
 public class InputValidation {
 
+    /**
+    *
+    * @param min the minimum length the string can be
+    * @param max the maximum length the string can be
+    * @param s the string to validate
+    * 
+    * @return if s has a length that satisfies min and max
+    * 
+    */
     public static boolean textLength(int min, int max, String s) {
         return s != null && s.length() <= max && s.length() >= min;
     }
 
+    /**
+    *
+    * @param s the string to validate
+    * 
+    * @return if s is a valid double
+    * 
+    */
     public static boolean isNumber(String s) {
         if (s == null || s.isEmpty()) {
             return false;
@@ -25,10 +41,32 @@ public class InputValidation {
         }
     }
 
+    /**
+     *
+     * @param min the minimum size the number can be
+     * @param max the maximum size the number can be
+     * @param n the int to validate
+     *
+     * @return if n has a size that satisfies min and max
+     *
+     */
     public static boolean numberSize(int min, int max, int n) {
         return n <= max && n >= min;
     }
 
+    /**
+    *
+    * @param name the projects name
+    * @param clientName the projects client name
+    * @param clientEmail the projects client email
+    * @param price the projects price
+    * @param startDate the projects start date
+    * @param deadline the projects deadline
+    * @param progress the projects progress
+    * 
+    * @return if the parameters would make a valid project
+    * 
+    */
     public static boolean validateProject(String name, String clientName, String clientEmail, String price,
             Date startDate, Date deadline, String progress) {
         boolean r = true;

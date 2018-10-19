@@ -16,7 +16,7 @@ import projectmanager.views.MainPanel;
 public class ProjectManager {
 
     public static JFrame app;
-    
+
     /**
      * @param args the command line arguments
      */
@@ -35,6 +35,11 @@ public class ProjectManager {
         app.setVisible(true);
     }
 
+    /**
+     *
+     * Adding test data (projects)
+     *
+     */
     public static void addTestData() {
         ProjectLog pl = ProjectLog.getInstance();
         Date d = new Date();
